@@ -1,0 +1,35 @@
+<html>
+
+
+    <button onclick="changeBackground();">Click me</button>
+    <script type="text/javascript">
+
+        function changeBackground() {
+            document.body.style.background = 'url(https://wallpapercave.com/wp/EBYJWD8.jpg)no-repeat';
+        }
+    
+    </script>
+<style>
+    image{
+        width: 100px;
+    }
+</style>
+
+<script> 
+
+    function changeImage()
+    {
+    var img = document.getElementById("image");
+    img.src="beach.png";
+    return false;
+    }
+    
+    </script>
+    
+    </head>
+    <body>
+    <img id="image" src="bliss.jpg" />
+    <br><br><br>
+    <button id="clickme" onclick="changeImage();">Click to change image!</button>
+    
+</html>

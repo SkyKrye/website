@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>SkyCore/Space</title>
+  <link rel="shortcut icon" href="/icon_transparent500x500.png" type="image/x-icon" />
+  <meta content="SkyCore/Space" property="og:title">
+  <meta content="SkyKrye's website's space gallery." property="og:description">
+  <meta content="http://web.smpverge.cf/" property="og:url">
+  <meta content="http://web.smpverge.cf/icon_transparent.png" property="og:image">
+  <meta content="#61dabb" data-react-helmet="true" name="theme-color">
+  <style>
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      background-image: url('bg-tobias-bjorkli-1938348n.jpg');
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: bottom;
+      overflow: overlay;
+    }
+
+    h1 {
+      font-family: system-ui;
+      font-size: 50px;
+      color: #61dabb;
+      text-align: center;
+      border: 5px solid transparent;
+      background-color: #22222287;
+      border-radius: 20px;
+      width: 400px;
+      height: fit-content;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    h2 {
+      font-family: system-ui;
+      font-size: 40px;
+      color: white;
+      font-style: italic;
+      text-align: center;
+      border: 5px;
+      border-radius: 20px;
+      width: fit-content;
+      padding: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+      background-color: #22222287;
+    }
+
+    h3 {
+      font-family: system-ui;
+      font-size: 30px;
+      color: white;
+      font-style: bold;
+      text-align: center;
+      padding: 10px;
+      border: 5px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+      background-color: #22222287;
+    }
+
+    h4 {
+      font-family: system-ui;
+      font-size: 40px;
+      color: white;
+      font-style: bold;
+      text-align: center;
+      padding: 10px;
+      border: 5px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+      background-color: #22222287;
+    }
+
+    h5 {
+      font-family: system-ui;
+      font-size: 40px;
+      color: white;
+      font-style: bold;
+      text-align: center;
+      padding: 10px;
+      border: 5px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+      background-color: #22222287;
+    }
+
+    h6 {
+      font-family: system-ui;
+      font-size: 15px;
+      color: white;
+      font-style: bold;
+      text-align: center;
+      padding: 10px;
+      border: 5px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+      background-color: #22222287;
+    }
+
+    p {
+      font-family: system-ui;
+      font-size: 30px;
+      color: white;
+      text-align: center;
+      border: 5px;
+      border-radius: 20px;
+      width: 1000px;
+      padding: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+      background-color: #22222287;
+    }
+
+    iframe {
+      font-family: system-ui;
+      font-size: 20px;
+      text-align: center;
+      border: 5px;
+      border-radius: 20px;
+      width: 500px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    a {
+      font-family: system-ui;
+      font-size: 30px;
+      text-align: center;
+      color: #61dabb;
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+      -o-transition: 0.5s;
+      -ms-transition: 0.5s;
+      -moz-transition: 0.5s;
+      -webkit-transition: 0.5s;
+      /* ...and now for the proper property */
+      transition: 0.5s;
+
+    }
+
+    a:hover {
+      color: #008E50;
+      border-radius: 5px;
+    }
+
+    meta name="viewport" content="width=device-width, initial-scale=1">img {
+      border: 5px;
+      border-radius: 20px;
+    }
+
+    div {
+      border: 5px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #ffffff97;
+      border-radius: 20px;
+      scrollbar-width: 2px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: #9999996b;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui;
+      background-color: #111;
+    }
+
+    .topnav {
+      background-color: #22222287;
+      border: 10px solid transparent;
+      font-family: system-ui;
+      float: center;
+      position: fixed;
+      width: 100%;
+      padding: 10px;
+      color: white;
+    }
+
+    .topnav a {
+      overflow: scroll;
+      float: center;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 20px;
+      height: 20px;
+    }
+
+    .topnav a:hover {
+      background-color: #177;
+      color: #199;
+      border-radius: 10px;
+    }
+
+    .topnav a.active {
+      background-color: #199;
+      color: white;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <center>
+    <div class="topnav">
+      <a href="http://web.smpverge.cf/">Home</a>
+      <a href="/code/">Code</a>
+      <a href="/store">Store</a>
+      <a class="active" href="#">Space</a>
+      <a href="/extra">Extra</a>
+      <a href="/about">About</a>
+    </div>
+  </center>
+
+  <br><br>
+  <style>
+    #myBtn {
+      display: none;
+      position: fixed;
+      bottom: 15px;
+      right: 25px;
+      z-index: 99;
+      color: white;
+      border-radius: 100%;
+      border: none;
+      background-color: #22222287;
+      cursor: pointer;
+      padding: 4px;
+      transition: 100ms;
+    }
+
+    #myBtn:hover {
+      -webkit-filter: brightness(200%);
+      align-self: center;
+      display: flex;
+      font-style: italic;
+      transition: 100ms -o-transition:.5s;
+      -ms-transition: .5s;
+      -moz-transition: .5s;
+      -webkit-transition: .5s;
+      /* ...and now for the proper property */
+      transition: 100ms;
+    }
+
+    img#gototop:hover {
+      -webkit-filter: brightness(100%);
+    }
+  </style>
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><img id="gototop" alt="▲" height=50px width=50px
+      src="/wucltux_48.png"></button>
+
+  <script>
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+
+  </div>
+
+  </div>
+  </style>
+  </head>
+
+  <body>
+    <center>
+      <h1><img id="image" src="/icon_transparent.png" height="120px">
+        SkyCore
+      </h1>
+    </center>
+    <center>
+      <h2>Space</h2>
+    </center>
+    <center>
+      <p>This is the space-related section of the website! This section has my astrophotographs, gear and much more!
+        This section will have more content soon and just enjoy for now!</p>
+    </center>
+    <center>
+      <p style="font-size: 20px">
+        <span style="font-size: 25px; font-weight: 900;">Frequently Asked Questions:</span><br>
+        ><span style="font-weight: 800; font-style: italic;"> What do I use? </span>The first tools I had for astronomy
+        were my mom's phone, a tripod and a 28x monocular. It's zoom nor light collecting power was great but it worked
+        for the time. Later on my aunt had an old Nikon L27 lying around so she gave it to me and that's what I've been
+        using and still do (for now). I really hope I'm able to get a good telescope, that'll really boost everything
+        for me.<br>
+        ><span style="font-weight: 800; font-style: italic;"> What do I edit my images with? </span>I don't edit my
+        images a lot now but when I do, I use Paint.NET (not the website!).
+      </p>
+    </center>
+    </div>
+
+
+
+
+
+
+
+
+    <style>
+      .foreground {
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px);
+        background-color: #ccc;
+        -webkit-filter: blur(3px);
+
+      }
+
+      div.gallery {
+        overflow: hidden;
+        color: white;
+        border-radius: 20px;
+        margin: 5px;
+        border: 1px solid #777;
+        float: left;
+        width: 210px;
+        background-color: #22222287;
+        transition: 200ms;
+      }
+
+      div.gallery:hover {
+        border: 1px solid #555;
+        box-shadow: 0px 20px 30px 20px rgba(0, 0, 0, 0.1), 0px 0px 11px 2px rgb(0 0 0);
+        transition: 200ms;
+
+      }
+
+      div.gallery img {
+        width: 100%;
+        height: auto;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+      }
+
+      div.desc {
+        padding: 15px;
+        text-align: center;
+        font-size: 20px;
+        overflow: hidden scroll;
+        resize: none;
+        text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+      }
+
+
+      .centerer {
+        align-content: center;
+        text-align: center;
+        display: inline-block;
+        box-shadow: none;
+      }
+    </style>
+
+
+
+    <center>
+
+
+      <center>
+        <div class="gallery">
+          <a href="/content/Moon1.png">
+            <img src="/content resize/Moon1.jpg" alt="A full moon." width="600" height="400">
+          </a>
+          <div class="desc"><span style="font-weight: 900; position: static;">Full Moon</span>
+            <hr style="border-color: #777;">This is basically where everything started from, it is the first clearest
+            moon shot I ever took and was the start of my love for astronomy.
+            <div id="Notes" style="
+  display: none;
+  font-style: italic;
+  font-weight: bolder;
+  font-family:system-ui;
+  font-size: 1em;
+  color:white;
+  box-shadow: none;
+  padding: none;
+">
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery">
+          <a href="/content/Moon(CLUP1).png">
+            <img src="/content resize/Moon(CLUP1).jpg" alt="First close-up shot of the moon." width="600" height="400">
+          </a>
+          <div class="desc" style="height: 40px; overflow: hidden scroll; resize: none;"><span
+              style="font-weight: 900;">Moon Close Up 1</span>
+            <hr style="border-color: #777;">A moon photo taken with normal and extra digital zoom, basically live-time
+            cropping.
+          </div>
+        </div>
+
+        <div class="gallery">
+          <a href="/content/Moon(CLUP2).png">
+            <img src="/content resize/Moon(CLUP2).jpg" alt="Second close-up shot of the moon." width="600" height="400">
+          </a>
+          <div class="desc" style="height: 40px; overflow: hidden scroll; resize: none;"><span
+              style="font-weight: 900;">Moon Close Up 2</span>
+            <hr style="border-color: #777;">Second extra zoom shot.
+
+          </div>
+        </div>
+
+        <div class="gallery">
+          <a href="/content/Moon(CLUP3).png">
+            <img src="/content resize/Moon(CLUP3).jpg" alt="Third close-up-shot of the moon." width="600" height="400">
+          </a>
+          <div class="desc" style="height: 40px; overflow: hidden scroll; resize: none;"><span
+              style="font-weight: 900;">Moon Close Up 3</span>
+            <hr style="border-color: #777;">Third extra zoom shot.
+          </div>
+        </div>
+
+        <div class="gallery">
+          <a href="/content/jupiter.png">
+            <img src="/content resize/jupiter.jpg" alt="Jupiter." width="600" height="400">
+          </a>
+          <div class="desc"><span style="font-weight: 900;">Jupiter</span>
+            <hr style="border-color: #777;">This was my attempt at imaging Jupiter for the first time. The bulge and
+            stretching is because of my monocular's focus.
+          </div>
+        </div>
+
+        <div class="gallery">
+          <a href="/content/vega.png">
+            <img src="/content resize/vega.jpg" alt="Vega." width="600" height="400">
+          </a>
+          <div class="desc"><span style="font-weight: 900;">Vega</span>
+            <hr style="border-color: #777;">This was my attempt at imaging Vega. It wasn't actually too hard to image
+            just the focusing was the pain, and again, the bulge is because of my monocular's focus.
+          </div>
+        </div>
+
+        <div class="gallery">
+          <a href="/content/star_hip109564.png">
+            <img src="/content resize/star_hip109564.jpg" alt="star hip109564." width="600" height="400">
+          </a>
+          <div class="desc"><span style="font-weight: 900;">Star</span>
+            <hr style="border-color: #777;">I found this star randomly when I was searching for a target on SkyWalker
+            2™️. It's called HIP109564 and was also fairly easy to image.
+          </div>
+        </div>
+
+        <div class="gallery">
+          <a href="/content/DSCN0632 FINAL large.png">
+            <img src="/content resize/DSCN0632 FINAL large.jpg" alt="My best image of the moon" width="600"
+              height="400">
+          </a>
+          <div class="desc"><span style="font-weight: 900;">Moon</span>
+            <hr style="border-color: #777;">This is my best image of the moon yet (as of 4/April/2023). I used Paint.NET
+            to sharpen and edit the image, honestly I love this image.
+          </div>
+        </div>
+
+        <div class="gallery">
+          <a href="/content/DSCN0632 FINAL large 2.png">
+            <img src="/content resize/DSCN0632 FINAL large 2.jpg" alt="My best image of the moon on a 180° angle."
+              width="600" height="400">
+          </a>
+          <div class="desc"><span style="font-weight: 900;">Moon 2</span>
+            <hr style="border-color: #777;">Rotated it to be 180°
+          </div>
+        </div>
+
+        <div class="gallery">
+          <a href="/content/DSCN0793.png">
+            <img src="/content resize/DSCN0793.jpg" alt="Another moon picture." width="600" height="400">
+          </a>
+          <div class="desc"><span style="font-weight: 900;">Moon 3</span>
+            <hr style="border-color: #777;">It's not really that good of a shot but I like it anyway.
+          </div>
+        </div>
+
+        <div class="gallery">
+          <a href="/content/IMG_20210626_015205291edit.png">
+            <img src="/content resize/IMG_20210626_015205291edit.jpg" alt="Full Moon Detailed" width="600" height="400">
+          </a>
+          <div class="desc"><span style="font-weight: 900;">Full Moon Detailed</span>
+            <hr style="border-color: #777;">A much better shot of my first image ever, however it is mostly edited and
+            the sharpening and colors etc. are enhanced.
+          </div>
+        </div>
+
+        <div class="gallery">
+          <a href="/content/IMG_20210626_015205291.png">
+            <img src="/content resize/IMG_20210626_015205291.jpg" alt="star hip109564" width="600" height="400">
+          </a>
+          <div class="desc"><span style="font-weight: 900;">Original detailed full moon</span>
+            <hr style="border-color: #777;">This is the same image as before except that this is the raw and original
+            one. You can really see how much I edited it.
+          </div>
+        </div>
+
+
+
+
+
+      </center>
+
+
+
+  </body>
+
+</html>

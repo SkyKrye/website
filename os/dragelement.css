@@ -1,0 +1,82 @@
+
+#mydiv {
+    position: absolute;
+    z-index: 9;
+    background-color: #333;
+    text-align: center;
+    border: 5px solid #111;
+    border-radius: 10px;
+    color: auto;
+  }
+  
+  #mydivheader {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: #1194ff;
+    color: black;
+  }
+  
+  .resizable-content {
+    min-height: 30px;
+    min-width: 30px;
+    resize: both;
+    overflow: auto;
+    max-height: 500px;
+    max-width: 1000px;
+    min-height: 200px;
+    min-width: 400px;
+  }
+  #mydiv2 {
+    position: absolute;
+    z-index: 9;
+    background-color: #333;
+    border: 5px solid #111;
+    border-radius: 10px;
+    color: auto;
+  }
+  
+  #mydivheader2 {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: #1194ff;
+    color: black;
+  }
+  
+  
+  #mydiv3 {
+    position: absolute;
+    z-index: 9;
+    background-color: #333;
+    border: 5px solid #111;
+    border-radius: 10px;
+    color: auto;
+  }
+  
+  #mydivheader3 {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: #1194ff;
+    color: black;
+  }
+  
+  
+  #start {
+    position: absolute;
+    z-index: 9;
+    background-color: #333;
+    border: 5px solid #111;
+    border-radius: 10px;
+    color: auto;
+  }
+  
+  #start {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: #333;
+    color: black;
+  }
+  

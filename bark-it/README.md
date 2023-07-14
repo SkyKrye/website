@@ -1,0 +1,6 @@
+-span is the tag for the leftnav, make sure to limit the characters for the name to 15.
+-btw latest posts gonna be displayed in leftnav marked as "post1, post2 and post3".
+-also the profile picture's max resolution is gonna be 177x177
+-also the "a href" tag in the "next page" button" needs to be filled, idk how you guys made it so that's for you 
+-***UPDATE***: posts are now textareas instead of divs, thank me later (stolen from megaboi)
+-nvm div better

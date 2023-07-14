@@ -1,0 +1,7 @@
+
+# HTID:19702697: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+php_value display_errors 1
+ErrorDocument 403 http://server.smpverge.cf/error403.html
+ErrorDocument 404 http://server.smpverge.cf/error404.html
+ErrorDocument 500 http://server.smpverge.cf/error500.html
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:19702697:

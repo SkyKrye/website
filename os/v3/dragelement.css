@@ -1,0 +1,42 @@
+.resizable-content {
+    min-height: 30px;
+    min-width: 30px;
+    resize: both;
+    overflow: auto;
+    max-height: 500px;
+    max-width: 1000px;
+    min-height: 200px;
+    min-width: 400px;
+    text-shadow: 0 2px 4px black;
+  }
+  #mydiv2 {
+    position: absolute;
+    z-index: 9;
+    border: 5px solid #111;
+    border-radius: 10px;
+    color: auto;
+  }
+  
+  #mydivheader2 {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    color: black;
+  }
+  
+  
+  #mydiv3 {
+    position: absolute;
+    z-index: 9;
+    border: 5px solid #111;
+    border-radius: 10px;
+    color: auto;
+  }
+  
+  #mydivheader3 {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: #1194ff;
+    color: black;
+  }

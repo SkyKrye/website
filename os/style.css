@@ -1,0 +1,177 @@
+body{
+    color: whitesmoke;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+    background-image: url("bliss.jpg");background-attachment:fixed;overflow:scroll;background-size:cover;
+	
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+	;:transparent
+  }
+  
+  ::-webkit-scrollbar-thumb {
+	background: rgba(90, 90, 90);
+  }
+  
+  ::-webkit-scrollbar-track {
+	background: rgba(0, 0, 0, 0.2);
+  }
+  
+button{
+	font-family: Tahoma;
+	margin: 10px;
+	color: white;
+	box-shadow: #222;
+	border-radius: 5px;
+	border-width: 2px;
+	background-color:rgba(107, 107, 107, 0.219);
+	display:inline-block;
+	width:120px;
+	height:26px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+button:hover{
+	transform: scale(90%);
+	transition: all .2s ease-in-out;
+}
+button.start{
+    width:10px;
+}
+.ui{
+	font-family: consolas;
+	position: relative;
+	margin: 300px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgb(30, 30, 30);
+	border: solid #000;
+	border-width: 10px;
+  border-radius: 20px;
+	width:1160px;
+	height:780px;
+	margin:250 auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.ui span{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.taskbar {
+	width:auto;
+	height:auto;
+	bottom:0;
+	position:absolute;
+	background-color:rgba(0, 0, 0, 0.445);
+	
+    backdrop-filter: blur(10px);
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.089), 0 1px 8px rgba(0, 0, 0, 0.596);
+
+}
+.startbutton {
+	background-color:#111;
+	height:25px;
+	font-family:Verdana, Geneva, Tahoma, sans-serif	;
+	color: white;
+	display:inline-block;
+	width:auto;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	background-color: transparent;
+	color: rgb(0, 0, 0);
+	font-weight: 500;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	/* ...and now for the proper property */
+	transition:.5s;
+	}
+.startbutton:hover{
+	transform: scale(110%);
+	transition: all .2s ease-in-out;
+	background-color: rgba(46, 46, 46, 0.555);
+}
+
+.A1 {
+	height:25px;
+	font-size: 20px;
+	font-family:Verdana, Geneva, Tahoma, sans-serif	;
+	display:inline-block;
+	width:auto;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	background-color: transparent;
+	color: rgb(0, 0, 0);
+	font-weight: 500;
+	
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	/* ...and now for the proper property */
+	transition:.5s;
+	}
+.A1:hover{
+	transform: scale(90%);
+	transition: all .2s ease-in-out;
+	background-color: rgba(46, 46, 46, 0.555);
+}
+
+.tasks {
+    float: center;
+	width:10px;
+}
+.task {
+	background-color:#222;
+	display:inline-block;
+	width:120px;
+	height:26px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+.task:hover{
+	transform: scale(1.5);
+	transition: all .2s ease-in-out;
+}
+img{
+	width: 30px;
+	height: 30px;
+	float:center;
+}
+textarea{
+    color:white;
+    background-color: #222;
+}
+#footer{
+	height: 25px;
+	background-color:rgba(219, 219, 219, 0.671);
+	color: black;
+    backdrop-filter: blur(10px);
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.089), 0 1px 8px rgba(0, 0, 0, 0.596);
+}
+a{
+	-o-transition:.5s;
+-ms-transition:.5s;
+-moz-transition:.5s;
+-webkit-transition:.5s;
+/* ...and now for the proper property */
+transition:.5s;
+}
+a:hover {color:#353C68}

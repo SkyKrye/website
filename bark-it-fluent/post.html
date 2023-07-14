@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bark-it: Post</title>
+    <style>
+  h1{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:40px;
+    color:#F97B72;
+    text-align: center;
+    background-color: #333;
+    border: 5px solid #F97B72;
+    border-radius: 10px;
+    width:300px;
+  }
+  h2{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:30px;
+    color:#00FFD4;
+    font-style:italic;
+    text-align: center;
+    background-color: #333;
+    border:5px solid #F97B72;
+    border-radius: 10px;
+    width:600px;
+  }
+  h3{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:30px;
+    color:#00FFD4;
+    font-style:italic;
+    text-align: center;
+    background-color: #333;
+    border:5px solid #F97B72;
+    border-radius: 10px;
+    width:600px;
+  }
+  h4{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:30px;
+    color:#00FFD4;
+    font-style:italic;
+    text-align: center;
+    background-color: #333;
+    border:5px solid #F97B72;
+    border-radius: 10px;
+    width:600px;
+  }
+  h6{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:1px;
+    color: #FCFFB2;
+    font-style: bold;
+    text-align: center;
+    border: 5px solid #00ffd500;
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    width:700px;
+    background-color: #00ffd530;
+  }
+  p{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:15px;
+    color:#00FFD4;
+    text-align: center;
+    background-color: #333;
+    border:5px solid #F97B72;
+    border-radius: 10px;
+    width:650px;
+  }
+  img {
+    border: 5px solid #00FFD4;
+  }
+  button{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:15px;
+    color: white;
+    font-style:bold;
+    border:5px;
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    background-color: #111;
+    width:70%;
+    height:5%
+  }
+  
+  a{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:20px;
+    color:#F97B72;
+  }
+textarea{
+  position: static;
+
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  color:white;
+  font-style: bold;
+  border:1px solid white;
+  border-radius: 5px;
+  background-color: transparent;
+  align-items: center;
+  max-width: 90%;
+  min-width: fit-content;
+  height: 200px;
+
+  min-height: 31px;
+}
+button{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:15px;
+    color: white;
+    font-style:bold;
+    border:5px;
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    background-color: #111;
+    width:70%;
+    height:5%
+  }
+  div {
+    text-align: center;
+    width: 532px;
+    backdrop-filter: blur(5px);
+  }
+  span {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:20px;
+    color: white;
+    font-style:bold;
+    border:5px;
+    border-radius: 10px;
+    background-color: #111;
+    width:100px;
+  }
+        /*span is the tag for the leftnav, make sure to limit the characters for the name to 15.
+        Btw latest posts gonna be displayed in leftnav marked as "post1, post2 and post3".
+        Also the profile picture's max resolution is gonna be 177x177
+        Also the "a href" tag in the "next page" button" needs to be filled, idk how you guys made it so that's for you 
+        ***UPDATE***: posts are now textareas instead of divs, thank me later (stolen from megaboi) */
+
+  meta name=<"viewport" content="width=device-width, initial-scale=1">
+body {
+  margin: 0;
+  font-family: century gothic;
+}
+img {
+  -webkit-filter: brightness(100%);
+}
+img:hover {
+    -webkit-filter: brightness(50%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+button {
+    -webkit-filter: brightness(100%);
+}
+button:hover {
+    -webkit-filter: brightness(50%);
+    size: 10px;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color:#00FFD4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00FFD4;
+  border:5px;
+  border-radius:10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F97B72;
+}
+textarea.definer{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size:20px;
+  color: white;
+  font-style:bold;
+  border:5px;
+  border-radius: 10px;
+  background-color: #000;
+  height: 31px;
+  width: 50px;
+  resize: none;
+}
+.post{
+  position: static;
+
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  color:white;
+  font-style: bold;
+  border: 5px transparent;
+  border-radius: 5px;
+  background-color: #00ffd510;
+  backdrop-filter: blur(5px);
+  width:710px;
+  height:auto;
+}
+.post:hover{
+    -webkit-filter: blur(0%);
+    width: 750px;
+    height: fit-content;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.2s ease;
+}
+textarea.posttitle{
+
+  position: static;
+
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 22px;
+  color:white;
+  font-style: bold;
+  border:1px solid white;
+  border-radius: 5px;
+  background-color: #111;
+  resize: horizontal;
+  min-width: fit-content;
+  max-width: 700px;
+  height:31px;
+  width: 210px;
+  align-items: center;
+}
+textarea.postbody{
+  position: static;
+
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  color:white;
+  font-style: bold;
+  border:1px solid white;
+  border-radius: 5px;
+  background-color: transparent;
+  align-items: center;
+  max-width: 90%;
+  min-width: fit-content;
+  width: 550px;
+  height: 200px;
+
+  min-height: 31px;
+}
+.profileinfo{
+  float: center;
+  overflow: hidden;
+  font-family: century gothic;
+  font-size:25px;
+  text-align: center;
+  border: 3px;
+  border-radius: 10px;
+  width: 100px;
+}
+img.logo{
+  float: center;
+  overflow: hidden;
+  text-align: center;
+  border:transparent;
+  border-radius: none;
+}
+.tdopnav{
+    object-position: right;
+    position: right;
+    border-radius: 10px;
+    top: 0%;
+    color: #F97B72;
+    background-color: #FFA993;
+    width: 30%;
+    height: 80%;
+}
+.topnav {
+  position:absolute;
+  overflow: hidden;
+  font-family: century gothic;
+  text-align: center;
+  width: 200px;
+  height: 600px;
+  border: 5px solid transparent;
+  background-color: #00ffd510;
+  border-radius: 10px;
+  top: 0%;
+  right:10px;
+  backdrop-filter: blur(2px);
+}
+.topnav:hover{
+    width: 300px;
+    backdrop-filter: blur(5px);
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+button.aactive{
+  background-color: #00FFD4;
+  color: #111;
+  font-style: bold;
+  font-weight: 500;
+  transition: 100ms;
+}
+.topnav a {
+  float: center;
+  color: #00FFD4;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  height: 20px;
+}
+.topnav a:hover {
+  backdrop-filter: blur(5px);
+  color: #00FFD4;
+  border: #111;
+  border-radius: 5px;
+  height: 20px;
+  background-color: #00ffd530;
+}
+.topnav a.active {
+  width:50px;
+  height: 20px;
+}
+.leftnav {
+  position:absolute;
+  overflow: hidden;
+  font-family: century gothic;
+  text-align: center;
+  width: 200px;
+  height: 600px;
+  border: 5px solid transparent;
+  background-color: #00ffd510;
+  border-radius: 10px;
+  top: 0%;
+  left:10px;
+  backdrop-filter: blur(2px);
+}
+.leftnav:hover{
+    width: 300px;
+    backdrop-filter: blur(5px);
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+.leftnav a {
+  float: center;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+.leftnav a:hover {
+  background-color: #111;
+  background-color: #00ffd510;
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+}
+.leftnav a.active {
+  color: white;
+  border-radius:20px;
+  width:50px;
+}
+.pageswitch {
+  bottom: 0%;
+  position: sticky;
+  backdrop-filter: blur(5px);
+  width: 710px;
+}
+.pagebuttons {
+  width: 710px;
+  height: 70px;
+  backdrop-filter: blur(5px);
+}
+</style>
+</head>
+<body>
+<center><div class="logo">
+<center>
+  <img class="logo" src="wp/bark-it.png" width="450" height="158"></a>
+</center>
+</div></center>
+
+
+<br>
+<right>
+  <div class="topnav">
+    <br>
+    <br>
+    <a class="active" href="index.html" ><button>Home</button></a>
+    <br>
+    <br>
+    <br>
+    <a  href="post.html"><button class="aactive">Post</button></a>
+    <br>
+    <br>
+    <br>
+    <a href="about.html"><button>About</button></a>
+    <br>
+    <br>
+  </div>
+
+  <br>
+  <div class="leftnav">
+    <br>
+    <br>
+    <a href="profile.html" ><button class="aactive">Profile:</button></a>
+    <br>
+    <br>
+    <img src="default user profile picture.png" style="border-radius: 100%;"></img>
+    <br>
+    <span>[insert name]</span>
+
+    <br>
+    <br>
+    <a href="post.html"><button class="aactive">Latest Posts:</button></a>
+    <br>
+    <br>
+    <span>
+      [post1]
+      <br>
+      <br>
+      [post2]
+      <br>
+      <br>
+      [post3]
+    </span>
+    <br>
+    <br>
+    <br>
+    <a href="settings.html"><button class="aactive">Settings</button></a>
+    <br>
+    <br>
+  </div>
+</right>
+
+</div>
+    </style>
+</head>
+<body>
+  <center>
+    <h6>
+      
+  <center><h1>Post</h1></center>
+    
+    
+    <center><h2><centre>Make your posts here lol, what else...</h2></center>
+    </h6>
+  </center>
+</div>
+<style>
+    body {
+      background-image: url('wp/4.png');background-attachment:fixed;overflow:scroll;background-size:cover;
+
+    }
+    </style>
+<br><center>
+<div class="post">
+  <div class=post style="border: none;"><br>
+    <textarea class="definer" readonly cols="4"> title: </textarea><textarea placeholder="Tell the post's title:" style="right:0%" class="posttitle"></textarea>
+    <hr><br>
+    <textarea class="definer" readonly cols="12"> post content: </textarea><br><textarea placeholder="Tell what you wanna say here:"  class="postbody"></textarea>
+    <br><br>
+  </div></div><br></center>
+  <center>
+  <a href="[insert upload page]" class=pageswitch style="width: 710px;"><button class=pagebuttons><img src="wp/arrow-up.png" style="border: 0;" height="30px" width="30px" alt="<-"></button></a>
+  </center>
+  
+</body>
+</html>

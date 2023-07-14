@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>SkyCore/Code</title>
+  <link rel="shortcut icon" href="/icon_transparent500x500.png" type="image/x-icon" />
+  <meta content="SkyCore/Code" property="og:title">
+  <meta content="SkyKrye's website's code section." property="og:description">
+  <meta content="http://web.smpverge.cf/" property="og:url">
+  <meta content="http://web.smpverge.cf/icon_transparent.png" property="og:image">
+  <meta content="#61dabb" data-react-helmet="true" name="theme-color">
+  <style>
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      background-image: url('bg-tobias-bjorkli-1938348n.jpg');
+      background-attachment: fixed;
+      overflow: scroll;
+      background-size: cover;
+      background-position: bottom;
+      overflow: overlay;
+    }
+
+    h1 {
+      font-family: system-ui;
+      font-size: 50px;
+      color: #61dabb;
+      text-align: center;
+      border: 5px solid transparent;
+      background-color: #22222287;
+      border-radius: 20px;
+      width: 400px;
+      height: fit-content;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    h2 {
+      font-family: system-ui;
+      font-size: 40px;
+      color: white;
+      font-style: italic;
+      text-align: center;
+      border: 5px;
+      border-radius: 20px;
+      width: fit-content;
+      padding: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+      background-color: #22222287;
+    }
+
+    h3 {
+      font-family: system-ui;
+      font-size: 30px;
+      color: white;
+      font-style: bold;
+      text-align: center;
+      padding: 10px;
+      border: 5px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+      background-color: #22222287;
+    }
+
+    h4 {
+      font-family: system-ui;
+      font-size: 40px;
+      color: white;
+      font-style: bold;
+      text-align: center;
+      padding: 10px;
+      border: 5px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+      background-color: #22222287;
+    }
+
+    h5 {
+      font-family: system-ui;
+      font-size: 40px;
+      color: white;
+      font-style: bold;
+      text-align: center;
+      padding: 10px;
+      border: 5px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+      background-color: #22222287;
+    }
+
+    h6 {
+      font-family: system-ui;
+      font-size: 15px;
+      color: white;
+      font-style: bold;
+      text-align: center;
+      padding: 10px;
+      border: 5px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+      background-color: #22222287;
+    }
+
+    p {
+      font-family: system-ui;
+      font-size: 30px;
+      color: white;
+      text-align: center;
+      border: 5px;
+      border-radius: 20px;
+      width: 1000px;
+      padding: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+      background-color: #22222287;
+    }
+
+    iframe {
+      font-family: system-ui;
+      font-size: 20px;
+      text-align: center;
+      border: 5px;
+      border-radius: 20px;
+      width: 500px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    a {
+      font-family: system-ui;
+      font-size: 30px;
+      text-align: center;
+      color: #61dabb;
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+      -o-transition: 0.5s;
+      -ms-transition: 0.5s;
+      -moz-transition: 0.5s;
+      -webkit-transition: 0.5s;
+      /* ...and now for the proper property */
+      transition: 0.5s;
+
+    }
+
+    a:hover {
+      color: #008E50;
+      background-color: #33333399;
+      border-radius: 5px;
+    }
+
+    meta name="viewport" content="width=device-width, initial-scale=1">img {
+      border: 5px;
+      border-radius: 20px;
+    }
+
+    div {
+      border: 5px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #ffffff97;
+      border-radius: 20px;
+      scrollbar-width: 2px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: #9999996b;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui;
+      background-color: #111;
+    }
+
+    .topnav {
+      background-color: #22222287;
+      border: 10px solid transparent;
+      font-family: system-ui;
+      float: center;
+      position: fixed;
+      width: 100%;
+      padding: 10px;
+      color: white;
+    }
+
+    .topnav a {
+      overflow: scroll;
+      float: center;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 20px;
+      height: 20px;
+    }
+
+    .topnav a:hover {
+      background-color: #177;
+      color: #199;
+      border-radius: 10px;
+    }
+
+    .topnav a.active {
+      background-color: #199;
+      color: white;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    textarea {
+      font-family: consolas;
+      font-size: 20px;
+      color: white;
+      text-align: left;
+      background-color: rgba(17, 17, 17, 0.308);
+      will-change: transform;
+      z-index: 4;
+      border: 4px solid transparent;
+      border-radius: 10px;
+      width: 1000px;
+      height: 500px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+      min-width: 30%;
+      min-height: 300px;
+      max-width: 90%;
+      max-height: fit-content;
+    }
+
+    #code_area {
+      font-family: system-ui;
+      font-size: 20px;
+      text-align: center;
+      background-color: #222;
+      border: 5px solid #222;
+      border-radius: 50px;
+      width: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <center>
+    <div class="topnav">
+      <a href="http://web.smpverge.cf/">Home</a>
+      <a class="active" href="#">Code</a>
+      <a href="/store">Store</a>
+      <a href="/space">Space</a>
+      <a href="/extra">Extra</a>
+      <a href="/about">About</a>
+    </div>
+  </center>
+
+  <br><br>
+
+  <style>
+    #myBtn {
+      display: none;
+      position: fixed;
+      bottom: 15px;
+      right: 25px;
+      z-index: 99;
+      color: white;
+      border-radius: 100%;
+      border: none;
+      background-color: #22222287;
+      cursor: pointer;
+      padding: 4px;
+      transition: 100ms;
+    }
+
+    #myBtn:hover {
+      -webkit-filter: brightness(200%);
+      align-self: center;
+      display: flex;
+      font-style: italic;
+      transition: 100ms -o-transition:.5s;
+      -ms-transition: .5s;
+      -moz-transition: .5s;
+      -webkit-transition: .5s;
+      /* ...and now for the proper property */
+      transition: 100ms;
+    }
+
+    img#gototop:hover {
+      -webkit-filter: brightness(100%);
+    }
+  </style>
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><img id="gototop" alt="▲" height=50px width=50px
+      src="/wucltux_48.png"></button>
+
+  <script>
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+
+  </div>
+
+  </div>
+  </style>
+  </head>
+
+  <body>
+    <center>
+      <h1 unselectable="on"><img id="image" src="/icon_transparent.png" height="120px">
+        SkyCore
+      </h1>
+    </center>
+    <center>
+      <h2>Code</h2>
+    </center>
+
+    <center>
+      <p>
+        <centre>A section for the website for all the code, not literally. This section mainly includes the code for
+          this and a few (maybe) other sections of the website. <span style="text-decoration: line-through;">(Not all
+            of the code is included since this website isn't open source yet)</span>
+      </p>
+    </center>
+    </div>
+    <center>
+      <h3 style="width:fit-content;padding: 10px;">The CSS code of index.html:
+    </center>
+    <center>
+      <textarea readonly id="code area" name="html code" rows="4" cols="50">
+      <!DOCTYPE html>
+<html>
+<head>
+    <title>SkyCore</title>
+    <style>
+        h1{
+          font-family:system-ui;
+          font-size:50px;
+          color:#199;text-align: center;
+           #333;border:5px solid #333;
+          background-color:#333;
+          border-radius: 20px;
+          width:400px;
+          backdrop-filter: blur(2px);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+          }
+        h2{
+          font-family:system-ui;
+          font-size:40px;
+          color:white;
+          font-style:italic;
+          text-align: center;
+          border: 5px;
+          border-radius: 20px;
+          width:200px;
+          backdrop-filter: blur(2px);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+          text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+          }
+        h3{
+          font-family:system-ui;
+          font-size:30px;
+          color:white;
+          font-style:bold;
+          text-align: center;
+          border: 5px;
+          border-radius: 20px;
+          width:400px;
+          backdrop-filter: blur(2px);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+          text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+          }
+        h4{
+          font-family:system-ui;
+          font-size:40px;
+          color:white;
+          font-style:bold;
+          text-align: center;
+          border: 5px;
+          border-radius: 20px;
+          width:300px;
+          backdrop-filter: blur(2px);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+          text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+          }
+        h5{
+          font-family:system-ui;
+          font-size:40px;
+          color:white;
+          font-style:bold;
+          text-align: center;
+          border: 5px;
+          border-radius: 20px;
+          width:300px;
+          backdrop-filter: blur(2px);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+          text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+          }
+        h6{
+          font-family:system-ui;
+          font-size:15px;
+          color: white;
+          font-style: bold;
+          text-align: center;
+          border: 5px;
+          border-radius: 10px;
+          width:300px;
+          backdrop-filter: blur(2px);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+          text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);}
+          
+        p{
+          font-family:system-ui;
+          font-size:30px;
+          color:white;
+          text-align: center;
+          border: 5px;
+          border-radius: 20px;
+          width:100px;
+          backdrop-filter: blur(2px);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+          text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+        }
+        p{
+          font-family:system-ui;
+          font-size:30px;
+          text-align: center;
+          border-radius: 20px;
+          width:1000px;
+          backdrop-filter: blur(2px);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+          text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+        }
+        iframe{
+          font-family:system-ui;
+          font-size:20px;
+          text-align: center;
+          border: 5px;
+          border-radius: 20px;
+          width:500px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+          text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+        }
+        a{
+          font-family:system-ui;
+          font-size:30px;
+          text-align:center;
+          color:palevioletred;
+          text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+        }
+        img {
+          border: 5px;
+          border-radius: 20px;
+        }
+
+        div{
+          border: 5px;
+          text-align: center;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+          text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+        }
+
+    </textarea>
+      <br>
+      </h3>
+      <center>
+        <h4 style="width:fit-content;padding: 10px;">The (added) CSS code of code.html</h4>
+      </center>
+      <textarea readonly name="More Code" id="" cols="30" rows="10">
+  textarea{
+    font-family:consolas;
+    font-size:20px;
+    color:white;
+    text-align: left;
+    background-color: rgba(17, 17, 17, 0.308);
+    border:4px solid #111;
+    border-radius: 10px;
+    width:1000px;
+    height:500px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+    min-width: 30%;
+    min-height: 300px;
+    max-width: 100%;
+    max-height: 750px;
+  }
+  #code_area{
+    font-family:system-ui;
+    font-size:20px;
+    color:pink;
+    text-align: center;
+    background-color: #222;
+    border:5px solid #222;
+    border-radius: 50px;
+    width:200px;
+  }
+
+  </textarea></h4>
+    </center>
+    <center>
+      <h5 style="width:fit-content;padding: 10px;">
+        <center>The CSS Code for the navigation bar:
+        </center>
+    </center>
+    <center><textarea readonly name="Navigation bar" id=Navbar"" cols="30" rows="10">
+<style>
+.topnav {
+  overflow: hidden;
+  background-color: #222;
+  border: 10px solid #222;
+  font-family: system-ui;
+  width: fit-content;
+  padding: 10px;
+  color: white;
+}
+
+.topnav:hover{
+  zoom: 170%;
+}
+
+.topnav a {
+  float: center;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.topnav a:hover {
+  background-color: #177;
+  color: #199;
+  border-radius: 10px;
+}
+
+.topnav a.active {
+  background-color: #199;
+  color: white;
+  border-radius: 10px;
+}
+</style>
+
+<div class="topnav">
+   <a class="active" href="index.html">Home</a>
+   <a href="code.html">Code</a>
+   <a href="space.html" >Space</a>
+   <a href="about.html">About</a>
+</div>
+  
+</textarea></h5><br>
+  </body>
+
+</html>

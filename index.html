@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>SkyCore</title>
+  <link rel="shortcut icon" href="icon_transparent500x500.png" type="image/x-icon" />
+  <meta content="SkyCore" property="og:title">
+  <meta content="SkyKrye's website." property="og:description">
+  <meta content="http://web.smpverge.cf/" property="og:url">
+  <meta content="http://web.smpverge.cf/icon_transparent.png" property="og:image">
+  <meta content="#61dabb" data-react-helmet="true" name="theme-color">
+  <script>
+    // Check if the requested page exists
+    function pageExists() {
+      var http = new XMLHttpRequest();
+      http.open('HEAD', window.location.href, false);
+      http.send();
+
+      return http.status !== 404;
+    }
+
+    // Redirect to the 404 page if the requested page doesn't exist
+    if (!pageExists()) {
+      window.location.href = '/404.html';
+    }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      background-image: url('bg-tobias-bjorkli-1938348n.jpg');
+      background-attachment: fixed;
+      overflow: scroll;
+      background-size: cover;
+      background-position: bottom;
+      overflow: overlay;
+    }
+
+    h1 {
+      font-family: system-ui;
+      font-size: 50px;
+      color: #61dabb;
+      text-align: center;
+      border: 5px solid transparent;
+      background-color: #22222287;
+      border-radius: 20px;
+      width: 400px;
+      height: fit-content;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    h2 {
+      font-family: system-ui;
+      font-size: 40px;
+      color: white;
+      font-style: italic;
+      text-align: center;
+      border: 5px;
+      border-radius: 20px;
+      width: fit-content;
+      padding: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+      background-color: #22222287;
+    }
+
+    h3 {
+      font-family: system-ui;
+      font-size: 30px;
+      color: white;
+      font-style: bold;
+      text-align: center;
+      padding: 10px;
+      border: 5px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+      background-color: #22222287;
+    }
+
+    h4 {
+      font-family: system-ui;
+      font-size: 40px;
+      color: white;
+      font-style: bold;
+      text-align: center;
+      padding: 10px;
+      border: 5px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+      background-color: #22222287;
+    }
+
+    h5 {
+      font-family: system-ui;
+      font-size: 40px;
+      color: white;
+      font-style: bold;
+      text-align: center;
+      padding: 10px;
+      border: 5px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+      background-color: #22222287;
+    }
+
+    h6 {
+      font-family: system-ui;
+      font-size: 15px;
+      color: white;
+      font-style: bold;
+      text-align: center;
+      padding: 10px;
+      border: 5px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+      background-color: #22222287;
+    }
+
+    p {
+      font-family: system-ui;
+      font-size: 30px;
+      color: white;
+      text-align: center;
+      border: 5px;
+      border-radius: 20px;
+      width: 1000px;
+      padding: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+      background-color: #22222287;
+    }
+
+    iframe {
+      font-family: system-ui;
+      font-size: 20px;
+      text-align: center;
+      border: 5px;
+      border-radius: 20px;
+      width: 500px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    a {
+      font-family: system-ui;
+      font-size: 30px;
+      text-align: center;
+      color: #61dabb;
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+      -o-transition: 0.5s;
+      -ms-transition: 0.5s;
+      -moz-transition: 0.5s;
+      -webkit-transition: 0.5s;
+      /* ...and now for the proper property */
+      transition: 0.5s;
+
+    }
+
+    a:hover {
+      color: #008E50;
+      background-color: #33333399;
+      border-radius: 5px;
+    }
+
+    meta name="viewport" content="width=device-width, initial-scale=1">img {
+      border: 5px;
+      border-radius: 20px;
+    }
+
+    div {
+      border: 5px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #ffffff97;
+      border-radius: 20px;
+      scrollbar-width: 2px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: #9999996b;
+    }
+
+
+    body {
+      margin: 0;
+      font-family: system-ui;
+      background-color: #111;
+    }
+
+    .topnav {
+      background-color: #22222287;
+      border: 10px solid transparent;
+      font-family: system-ui;
+      float: center;
+      position: fixed;
+      width: 100%;
+      padding: 10px;
+      color: white;
+    }
+
+    .topnav a {
+      overflow: scroll;
+      float: center;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 20px;
+      height: 20px;
+    }
+
+    .topnav a:hover {
+      background-color: #177;
+      color: #199;
+      border-radius: 10px;
+    }
+
+    .topnav a.active {
+      background-color: #199;
+      color: white;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <center>
+    <div class="topnav">
+      <a class="active" href="#">Home</a>
+      <a href="/code">Code</a>
+      <a href="/store">Store</a>
+      <a href="/space">Space</a>
+      <a href="/extra">Extra</a>
+      <a href="/about">About</a>
+    </div>
+  </center>
+
+  <br><br>
+  <style>
+    #myBtn {
+      display: none;
+      position: fixed;
+      bottom: 15px;
+      right: 90px;
+      z-index: 99;
+      color: white;
+      border-radius: 100%;
+      border: none;
+      background-color: #22222287;
+      cursor: pointer;
+      padding: 4px;
+      transition: 100ms;
+    }
+
+    #myBtn:hover {
+      -webkit-filter: brightness(200%);
+      align-self: center;
+      display: flex;
+      font-style: italic;
+      transition: 100ms -o-transition:.5s;
+      -ms-transition: .5s;
+      -moz-transition: .5s;
+      -webkit-transition: .5s;
+      /* ...and now for the proper property */
+      transition: 100ms;
+    }
+
+    img#gototop:hover {
+      -webkit-filter: brightness(100%);
+    }
+  </style>
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><img id="gototop" alt="▲" height=50px width=50px
+      src="/wucltux_48.png"></button>
+
+  <script>
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+
+
+    // Generate a random number between 1 and 100
+    var randomNumber = Math.floor(Math.random() * 100) + 1;
+
+    // Check if the random number is 1 (1/100 chance)
+    if (randomNumber === 1) {
+      // Display the alternate image
+      document.getElementById('image').src = '/content/media/echoxd/SolarIcomsLogoWithoutBg.png';
+      document.getElementById('image').alt = 'Alternate Image';
+    }
+  </script>
+
+  </div>
+
+  <body>
+    <center>
+      <h1><img id="image" src="icon_transparent.png" height="120px">
+        SkyCore
+      </h1>
+    </center>
+
+
+    <center>
+      <p>
+        <centre>
+          Hello! You're now on SkyKrye's goofy website, idk what to say but you can have a look around the site and get
+          to know more! This site includes things that were originally present in the <a
+            href=https://discord.gg/keV6Bmc>Discord Server</a>, from games, notes and pretty much most of the stuff that
+          was is related to minecraft or other stuff. I also have a store where I put my games and stuff, visit it <a
+            href="store.html">here.</a>
+      </p>
+    </center>
+    </div>
+
+    <center>
+      <h3 style="width: 510px;">An introduction to my YouTube Channel:
+        <center><iframe width="500" height="255" src="https://www.youtube.com/embed/z3wmidXA3kk"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+      </h3>
+    </center>
+
+
+
+    <center>
+      <h4 style="width:610px;">Visit the Discord Server here:
+        <center><iframe src="https://discord.com/widget?id=707118006467297390&theme=dark" width="400" height="500"
+            allowtransparency="true" frameborder="0"
+            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+            style="width:600px;"></iframe>
+          <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
+            new Crate({
+              server: '707118006467297390', // SkyKrye's café!
+              channel: '982238459123097631' // #website-general
+            })
+          </script>
+      </h4>
+    </center>
+
+    <center>
+      <h5 style="width:940px;">Me in Minecraft! (ignore background)
+        <center><img src="/content.png" alt="[alt3]" style="border-radius: 20px;">
+      </h5>
+    </center>
+  </body>
+
+</html>

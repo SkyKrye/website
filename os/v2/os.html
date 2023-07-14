@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="dragelement.css">
+<script src="dragelement.js"></script>
+
+  
+
+<body>
+<div id="footer">
+	<div class="startbutton" onclick="if(document.getElementById('start') .style.display=='none') {document.getElementById('start') .style.display=''}else{document.getElementById('start') .style.display='none'}"> Start </div>
+
+	<div class="A1" onclick="if(document.getElementById('mydiv') .style.display=='none') {document.getElementById('mydiv') .style.display=''}else{document.getElementById('mydiv') .style.display='none'}"> Resizable-Content </div>
+
+	<div class="A2" onclick="if(document.getElementById('mydiv2') .style.display=='none') {document.getElementById('mydiv2') .style.display=''}else{document.getElementById('mydiv2') .style.display='none'}"> A2 Resizable-Content </div>
+
+	<div class="A3"> A3 Resizable-Content </div>
+</div>    
+
+<style>
+
+
+  #mydiv {
+    position: absolute;
+    z-index: 9;
+    border: 1px;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  #mydivheader {
+    padding: 10px;
+    border: 1px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: #00000054;
+    color: white;
+    text-align: left;
+    font-weight: 0;
+    font-size: 15px;
+
+  }
+  
+  #mydivbottomheader {
+    background: #2196F3;
+    color: white;
+    text-align: left;
+    font-size: 20px;
+    height: 25px;
+    border-bottom-left-radius: 500px;
+    border-bottom-right-radius: 500px;
+
+  }
+  .resizable-content {
+    color: white;
+    resize:all;
+    overflow: auto;
+    max-height: 720px;
+    max-width: 1080px;
+    border: 5px solid #00000054;
+    backdrop-filter: blur(4px);
+  }
+  </style>
+  <body>
+  
+  <div id="mydiv" style="display: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);">
+    <div id="mydivheader"><a style="background-color: #105288;border-radius: 5px;" title="Click to Show/Hide Content" type="a" onclick="if(document.getElementById('mydiv') .style.display=='none') {document.getElementById('mydiv') .style.display=''}else{document.getElementById('mydiv') .style.display='none'}"> × </a> resizable-content</div>
+    <div class="resizable-content" style="background-color: transparent;">Resize Me!</div>
+  </div>
+  
+  <script>
+  //Make the DIV element draggagle:
+  dragElement(document.getElementById("mydiv"));
+  
+  function dragElement(elmnt) {
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    if (document.getElementById(elmnt.id + "header")) {
+      /* if present, the header is where you move the DIV from:*/
+      document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+    } else {
+      /* otherwise, move the DIV from anywhere inside the DIV:*/
+      elmnt.onmousedown = dragMouseDown;
+    }
+  
+    function dragMouseDown(e) {
+      e = e || window.event;
+      e.preventDefault();
+      // get the mouse cursor position at startup:
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      document.onmouseup = closeDragElement;
+      // call a function whenever the cursor moves:
+      document.onmousemove = elementDrag;
+    }
+  
+    function elementDrag(e) {
+      e = e || window.event;
+      e.preventDefault();
+      // calculate the new cursor position:
+      pos1 = pos3 - e.clientX;
+      pos2 = pos4 - e.clientY;
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      // set the element's new position:
+      elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+      elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    }
+  
+    function closeDragElement() {
+      /* stop moving when mouse button is released:*/
+      document.onmouseup = null;
+      document.onmousemove = null;
+    }
+  }
+  </script>
+  
+
+  
+<style>
+
+
+  #mydiv2 {
+    z-index: 9;
+    border: 1px;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  #mydivheader2 {
+    padding: 10px;
+    border: 1px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: #2196F3;
+    color: white;
+    text-align: left;
+    font-weight: 700;
+
+  }
+  
+  #mydivbottomheader2 {
+    background: #2196F3;
+    color: white;
+    text-align: left;
+    font-size: 20px;
+    height: 25px;
+    border-bottom-left-radius: 500px;
+    border-bottom-right-radius: 500px;
+
+  }
+  .resizable-content {
+    color: white;
+    resize:all;
+    overflow: auto;
+    max-height: 720px;
+    max-width: 1080px;
+    backdrop-filter: blur(4px);
+  }
+  </style>
+  <body>
+  
+  <div id="mydiv2" style="display: none;box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);">
+    <div id="mydivheader"><a style="background-color: #105288;border-radius: 5px;" title="Click to Show/Hide Content" type="a" onclick="if(document.getElementById('mydiv2') .style.display=='none') {document.getElementById('mydiv2') .style.display=''}else{document.getElementById('mydiv2') .style.display='none'}"> × </a> resizable-content</div>
+    <div class="resizable-content" style="background-color: transparent;">hello lol</div>
+  </div>
+  
+  <script>
+  //Make the DIV element draggagle:
+  dragElement(document.getElementById("mydiv2"));
+  
+  function dragElement(elmnt) {
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    if (document.getElementById(elmnt.id + "header")) {
+      /* if present, the header is where you move the DIV from:*/
+      document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+    } else {
+      /* otherwise, move the DIV from anywhere inside the DIV:*/
+      elmnt.onmousedown = dragMouseDown;
+    }
+  
+    function dragMouseDown(e) {
+      e = e || window.event;
+      e.preventDefault();
+      // get the mouse cursor position at startup:
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      document.onmouseup = closeDragElement;
+      // call a function whenever the cursor moves:
+      document.onmousemove = elementDrag;
+    }
+  
+    function elementDrag(e) {
+      e = e || window.event;
+      e.preventDefault();
+      // calculate the new cursor position:
+      pos1 = pos3 - e.clientX;
+      pos2 = pos4 - e.clientY;
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      // set the element's new position:
+      elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+      elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    }
+  
+    function closeDragElement() {
+      /* stop moving when mouse button is released:*/
+      document.onmouseup = null;
+      document.onmousemove = null;
+    }
+  }
+  </script>
+  
+
+
+<div id="start" style="display: none">
+  <div class="resizable-content" style="width:10px; max-width: 10px;">
+  
+            <button style="width:auto;height:auto;font-size: 50px;" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('mydiv') .style.display=='none') {document.getElementById('mydiv') .style.display=''}else{document.getElementById('mydiv') .style.display='none'}">App1</button>
+<br>
+            <button style="width:auto;height: auto;font-size:50px;" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('mydiv2') .style.display=='none') {document.getElementById('mydiv2') .style.display=''}else{document.getElementById('mydiv2') .style.display='none'}">App2</button>
+<br>
+            <button style="width:auto;height:auto;font-size: 50px;" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('mydiv2') .style.display=='none') {document.getElementById('mydiv2') .style.display=''}else{document.getElementById('mydiv2') .style.display='none'}">|Ξ|</button>
+<br>
+            <button style="width:auto;height:auto;font-size: 50px;" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('mydiv3') .style.display=='none') {document.getElementById('mydiv3') .style.display=''}else{document.getElementById('mydiv3') .style.display='none'}">🖱</button>
+    
+  
+  </div>
+  
+</div>
+        
+        <div class="tasks">         
+        <div class="startbutton">⊞OS:SkyKrye</div>
+
+            <button class="startbutton1" title="Start" type="button" onclick="if(document.getElementById('start') .style.display=='none') {document.getElementById('start') .style.display=''}else{document.getElementById('start') .style.display='none'}">⊞</button>
+
+   
+
+            <button id="startIcons" title="resizable-content" type="button" onclick="if(document.getElementById('mydiv') .style.display=='none') {document.getElementById('mydiv') .style.display=''}else{document.getElementById('mydiv') .style.display='none'}">A1</button>
+
+            <button id="startIcons" title="calculator (pyscript for html CHECK CREDITS)" type="button" onclick="if(document.getElementById('mydiv2') .style.display=='none') {document.getElementById('mydiv2') .style.display=''}else{document.getElementById('mydiv2') .style.display='none'}">A2</button>
+
+            <button id="startIcons" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('mydiv2') .style.display=='none') {document.getElementById('mydiv2') .style.display=''}else{document.getElementById('mydiv2') .style.display='none'}">|Ξ|</button>
+    
+            <button id="startIcons" title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('mydiv3') .style.display=='none') {document.getElementById('mydiv3') .style.display=''}else{document.getElementById('mydiv3') .style.display='none'}">🖱</button>
+</body>
+</html>

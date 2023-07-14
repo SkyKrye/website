@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bark-it: Settings</title>
+    <style>
+        h1{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size:40px;color:#F97B72;text-align: center;background-color: #333;border:5px solid #F97B72;border-radius: 30px;width:350px;}
+        h2{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size:30px;color:#00FFD4;font-style:italic;text-align: center;background-color: #333;border:5px solid #F97B72;border-radius: 20px;width:600px;}
+        h3{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size:25px;color:#00FFD4;text-align: center;background-color: #333;border:5px solid #F97B72;border-radius: 20px;width:450px;}
+        h4{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size:1px;color: #FCFFB2;font-style: bold;text-align: center;border: 5px solid #00FFD4;border-radius: 5px;background-color:#333;width:700px;}
+        h6{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size:1px;color: #FCFFB2;font-style: bold;text-align: center;border: 5px solid #00FFD4;border-radius: 5px;background-color:#333;width:700px;}
+        p{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size:15px;color:#00FFD4;text-align: center;background-color: #333;border:5px solid #F97B72;border-radius: 25px;width:400px;}
+        a{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size:20px;color:#F97B72;}
+        button{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size:15px;color: white;font-style:bold;border:5px;border-radius: 20px;background-color: #333;width:100px;}
+        div {text-align: center;width: 532px;}
+        textarea{font-family:consolas;font-size:15px;color:#F97B72;text-align: center;background-color: #333;border:5px solid #00FFD4;border-radius: 50px;width:250px;height:20px;align-items: center;}
+        span {font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size:20px;color: white;font-style:bold;border:5px;border-radius: 10px;background-color: #111;width:100px}
+        /*
+        missing value: class="active" from topnav navbar*/
+
+  meta name=<"viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: century gothic;
+}
+
+img {
+    -webkit-filter: brightness(100%);
+}
+
+img:hover {
+    -webkit-filter: brightness(50%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color:#00FFD4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00FFD4;
+  border:5px;
+  border-radius:10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F97B72;
+}
+
+.post{
+  position: static;
+
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  color:white;
+  font-style: bold;
+  border:3px solid #00FFD4;
+  border-radius: 10px;
+  background-color:#333;
+  width:900px;
+  height:300px;
+
+}
+
+
+
+
+.profileinfo{
+  float: center
+  overflow: hidden;
+  font-family: century gothic;
+  font-size:25px;
+  text-align: center;
+  border: 3px;
+  border-radius: 20px;
+  width: 100px;
+
+}
+
+.logo{
+  float: center
+  overflow: hidden;
+  font-family: century gothic;
+  text-align: center;
+  border-radius: 10px;
+
+}
+
+.tdopnav{
+    object-position: right;
+    position: right;
+    border-radius: 10px;
+    top: 0%;
+    color: #F97B72;
+    background-color: #FFA993;
+    width: 30%;
+    height: 80%;
+
+}
+
+.topnav {
+  position:absolute;
+  overflow: hidden;
+  font-family: century gothic;
+  text-align: center;
+  width: 200px;
+  height: 600px;
+  border: 5px solid #F97B72;
+  border-radius: 20px;
+  top: 0%;
+  right:10px;
+  background: #333;
+}
+
+.topnav a {
+  float: center;
+  color: pink;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.topnav a:hover {
+  background-color: #111;
+  color: palevioletred;
+  border: #111;
+  border-radius: 20px;
+}
+
+.topnav a.active {
+  background-color: palevioletred;
+  color: white;
+  border:0px solid palevioletred;
+  border-radius:20px;
+  width:50px;
+}
+
+.leftnav {
+  position:absolute;
+  overflow: hidden;
+  font-family: century gothic;
+  text-align: center;
+  width: 200px;
+  height: 600px;
+  border: 5px solid #F97B72;
+  border-radius: 20px;
+  top: 0%;
+  left:10px;
+  background: #333;
+}
+
+.leftnav a {
+  float: center;
+  color: pink;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.leftnav a:hover {
+  background-color: #111;
+  color: palevioletred;
+  border: #111;
+  border-radius: 20px;
+}
+
+.leftnav a.active {
+  background-color: palevioletred;
+  color: white;
+  border:0px solid palevioletred;
+  border-radius:20px;
+  width:50px;
+}
+.pageswitch {
+  bottom: 0%;
+  position: sticky;
+
+}
+.pagebuttons {
+  width: 350px;
+  height: 50px;
+  border: 5px solid #111
+}
+
+</style>
+</head>
+<body>
+  <center><div class="logo">
+    <center>
+      <img src="bark-it.png" width="450" height="158"></a>
+    </center>
+    </div></center>
+
+<br>
+<right>
+  <div class="topnav">
+    <br>
+    <br>
+    <a href="index.html" ><button>Home</button></a>
+    <br>
+    <br>
+    <br>
+    <a  href="post.html"><button>Post</button></a>
+    <br>
+    <br>
+    <br>
+    <a href="about.html"><button>About</button></a>
+    <br>
+    <br>
+  </div>
+
+  <br>
+  <div class="leftnav">
+    <br>
+    <br>
+    <a class="active" href="profile.html" ><button>Profile:</button></a>
+    <br>
+    <br>
+    <img src="default user profile picture.png"></img>
+    <br>
+    <span>[insert name]</span>
+
+    <br>
+    <br>
+    <a class="active" href="post.html"><button>Latest Posts:</button></a>
+    <br>
+    <br>
+    <span>
+      [post1]
+      <br>
+      <br>
+      [post2]
+      <br>
+      <br>
+      [post3]
+    </span>
+    <br>
+    <br>
+    <br>
+    <a class="active" href="settings.html"><button>Settings</button></a>
+    <br>
+    <br>
+  </div>
+</right>
+<center>
+<h4>
+<center><h1>Settings</h1></center>
+<center><h2>Welcome to Bark-it! A better Twitter.</h2></center>
+
+
+<center><p><centre><bold>Change some settings and stuff for yourself lol</bold>.</p></center>
+</h4>
+<br>
+
+<h6>
+  <center>
+    <h3>
+      Show panels: <button>Y/N</button>
+      <br>
+      Left: <button>Y/N</button>
+      <br>
+      Right: <button>Y/N</button>
+      <br>
+      Change Email:
+      <br>
+      <textarea name="namechange" id="namechange" cols="30" rows="10">[enter name]</textarea>
+      <br>
+      <button>Save</button>
+      <br>
+      Change Password:
+      <br>
+      <textarea name="namechange" id="namechange" cols="30" rows="10">[enter name]</textarea>
+      <br>
+      <button>Save</button>
+    </h3>
+    
+  </center>
+</h6>
+
+</center>
+</div>
+</div>
+    </style>
+</head>
+<body><style>
+    body {
+      background-image: url('barkitbg-new.jpg');background-attachment:fixed;overflow:scroll;background-size:cover;
+
+    }
+    </style>
+
+<center>
+
+</body>
+</html> 

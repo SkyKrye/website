@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>SkyCore/About</title>
+  <link rel="shortcut icon" href="/icon_transparent500x500.png" type="image/x-icon" />
+  <meta content="SkyCore/About" property="og:title">
+  <meta content="SkyKrye's website's about section." property="og:description">
+  <meta content="http://web.smpverge.cf/" property="og:url">
+  <meta content="http://web.smpverge.cf/icon_transparent.png" property="og:image">
+  <meta content="#61dabb" data-react-helmet="true" name="theme-color">
+  <style>
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      background-image: url('bg-tobias-bjorkli-1938348n.jpg');
+      background-attachment: fixed;
+      overflow: scroll;
+      background-size: cover;
+      background-position: bottom;
+      overflow: overlay;
+    }
+
+    h1 {
+      font-family: system-ui;
+      font-size: 50px;
+      color: #61dabb;
+      text-align: center;
+      border: 5px solid transparent;
+      background-color: #22222287;
+      border-radius: 20px;
+      width: 400px;
+      height: fit-content;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    h2 {
+      font-family: system-ui;
+      font-size: 40px;
+      color: white;
+      font-style: italic;
+      text-align: center;
+      border: 5px;
+      border-radius: 20px;
+      width: fit-content;
+      padding: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+      background-color: #22222287;
+    }
+
+    h3 {
+      font-family: system-ui;
+      font-size: 30px;
+      color: white;
+      font-style: bold;
+      text-align: center;
+      padding: 10px;
+      border: 5px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+      background-color: #22222287;
+    }
+
+    h4 {
+      font-family: system-ui;
+      font-size: 40px;
+      color: white;
+      font-style: bold;
+      text-align: center;
+      padding: 10px;
+      border: 5px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+      background-color: #22222287;
+    }
+
+    h5 {
+      font-family: system-ui;
+      font-size: 20px;
+      color: white;
+      font-style: bold;
+      text-align: center;
+      padding: 10px;
+      border: 5px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+      background-color: #22222287;
+    }
+
+    h6 {
+      font-family: system-ui;
+      font-weight: 0;
+      font-size: 20px;
+      color: white;
+      border: 5px;
+      border-radius: 20px;
+      width: fit-content;
+      padding: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+      background-color: #22222287;
+    }
+
+    p {
+      font-family: system-ui;
+      font-size: 20px;
+      color: white;
+      border: 5px;
+      border-radius: 20px;
+      width: 900px;
+      padding: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+      background-color: #22222287;
+    }
+
+    iframe {
+      font-family: system-ui;
+      font-size: 20px;
+      text-align: center;
+      border: 5px;
+      border-radius: 20px;
+      width: 500px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    a {
+      font-family: system-ui;
+      font-size: 20px;
+      text-align: center;
+      color: #61dabb;
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+      -o-transition: 0.5s;
+      -ms-transition: 0.5s;
+      -moz-transition: 0.5s;
+      -webkit-transition: 0.5s;
+      /* ...and now for the proper property */
+      transition: 0.5s;
+
+    }
+
+    a:hover {
+      color: #008E50;
+      background-color: #33333399;
+      border-radius: 5px;
+    }
+
+    meta name="viewport" content="width=device-width, initial-scale=1">img {
+      border: 5px;
+      border-radius: 20px;
+    }
+
+    div {
+      border: 5px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 1);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #ffffff97;
+      border-radius: 20px;
+      scrollbar-width: 2px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: #9999996b;
+    }
+
+
+    body {
+      margin: 0;
+      font-family: system-ui;
+      background-color: #111;
+    }
+
+    .topnav {
+      background-color: #22222287;
+      border: 10px solid transparent;
+      font-family: system-ui;
+      float: center;
+      position: fixed;
+      width: 100%;
+      padding: 10px;
+      color: white;
+    }
+
+    .topnav a {
+      overflow: scroll;
+      float: center;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 20px;
+      height: 20px;
+    }
+
+    .topnav a:hover {
+      background-color: #177;
+      color: #199;
+      border-radius: 10px;
+    }
+
+    .topnav a.active {
+      background-color: #199;
+      color: white;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <center>
+    <div class="topnav">
+      <a href="http://web.smpverge.cf/">Home</a>
+      <a href="/code">Code</a>
+      <a href="/store">Store</a>
+      <a href="/space">Space</a>
+      <a href="/extra">Extra</a>
+      <a class="active" href="#">About</a>
+    </div>
+  </center>
+
+  <br><br>
+  <style>
+    #myBtn {
+      display: none;
+      position: fixed;
+      bottom: 15px;
+      right: 25px;
+      z-index: 99;
+      color: white;
+      border-radius: 100%;
+      border: none;
+      background-color: #22222287;
+      cursor: pointer;
+      padding: 4px;
+      transition: 100ms;
+    }
+
+    #myBtn:hover {
+      -webkit-filter: brightness(200%);
+      align-self: center;
+      display: flex;
+      font-style: italic;
+      transition: 100ms -o-transition:.5s;
+      -ms-transition: .5s;
+      -moz-transition: .5s;
+      -webkit-transition: .5s;
+      /* ...and now for the proper property */
+      transition: 100ms;
+    }
+
+    img#gototop:hover {
+      -webkit-filter: brightness(100%);
+    }
+  </style>
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><img id="gototop" alt="▲" height=50px width=50px
+      src="/wucltux_48.png"></button>
+
+  <script>
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+
+
+  </div>
+
+  </div>
+  </style>
+  </head>
+
+  <body>
+    <center>
+      <h1><img id="image" src="/icon_transparent.png" height="120px">
+        SkyCore
+      </h1>
+    </center>
+    <center>
+      <h2>About</h2>
+    </center>
+
+
+    <center>
+      <p>So basically this is the about section of my site, and some credits, nothing else ☺</p>
+      <p>
+        <!--p style="font-weight: 500;"-->
+        HI, this is <b>SkyCore</b>, <b>SkyKrye's</b> website, under the <b>smpverge.cf</b> domain. I'm a goof that does
+        stuff for fun on the internet with a <a href="youtube.com/SkyKrye">dying youtube channel</a>, anyway this is my
+        website and here I post my stuff here.
+      </p>
+      <p><b>History:</b>
+        Well so I'll just say, that this site was one that I enjoyed making, in the process I discovered many new
+        features I never knew were even possible in HTML (well the features that I can accomplish that is), and really I
+        was pretty impressed myself to see how it all turned out, I really hope that I might actually be able to work on
+        it after it's properly published (or maybe it already is?) and that more visitors can come! The history is also
+        pretty weird, well this site was built up from an HTML prototype which was related to rainforests, yeah... and
+        the feeling of leaving prebuilt tools as powerful as Wix was harsh but it's much more powerful to work on your
+        own, and with HTML and coding it's been really easy for me to do so when I learnt this language. Well in case
+        you don't know, I used to have a pretty well developed site in Wix, and I sadly had to delete it because of a
+        few problems I had, and so I moved on to working solo like this.
+      </p>
+      <p>So anyway, thanks a lot for taking a visit to my site! (or you just skipped to this page) And if you want to
+        support me and the development of this website, then make sure to subscribe to my <a
+          href="https://youtube.com/skykrye">YouTube Channel</a> and for even further support, you can join the <a
+          href="https://discord.gg/keV6Bmc">Discord Server.</a> Doing so supports me a lot and motivates me to make this
+        type of content, so do come back as I'll update this site on a (maybe) weekly basis.
+      </p>
+    </center>
+
+
+    <center>
+      <h6><i>That's all I guess!</i></h6>
+
+
+      <p style="width: fit-content; font-size: 15px; font-weight: 1;">
+        <b>Links:</b>
+        <a href="https://www.youtube.com/skykrye" target="_blank" style="font-size: 15px;">YouTube Channel</a> and <a
+          href="https://discord.gg/keV6Bmc" target="_blank" style="font-size: 15px;">Discord Server</a>.
+        Special Special Special thanks to <a href="https://www.youtube.com/channel/UCWYZLtw17DvFZi_WxeQvVoQ"
+          target="_blank" style="font-size: 15px;">Megaboi</a> who taught me everything related to code.
+
+        <br><b>Credit links:</b>
+        <a href=https://www.pexels.com/photo/photo-of-aurora-during-evening-1938348/ target="_blank"
+          style="font-size: 15px;">Background picture</a> and
+        <a href="https://youtu.be/hUot-Ap5l_M" target="_blank" style="font-size: 15px;">Minecraft Screenshot texture
+          pack</a>.
+
+        <br><span style="font-weight: 1;">This is the end of the page -and website, I really hope you liked it! Made by
+          SkyKrye</span>
+      </p>
+    </center>
+  </body>
+
+</html>

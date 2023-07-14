@@ -1,0 +1,86 @@
+<html>
+    <link href="style.css" rel="stylesheet">
+<body>
+    <div class="ui">
+        <right>
+        <h1>  
+        >>accessing drives
+        <br>
+        >>user:  <input id="first_name" placeholder="Your Name">
+        <button id="say" style="width: 40px;">
+            ✔
+        </button>
+        <br>
+        >>os:\
+            <br>  >>↪user\
+            <br><div id="result">>>↪default_user</div>
+        <script src="sayhi.js"></script>
+    </h1>
+        
+        
+    <h2>
+        Welcome to CLIos! [BETA]
+    </h2>
+<hr>
+
+
+<br>
+<div id="Youtube" style="display:none; float:right; position: relative;">
+    >>Executing: "Youtube"
+    <br>
+    <div id="ui">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <div id="yt" style="width:300;height:163;border:1px solid #777;border-radius: 5px; float: top; position: relative">
+        <input type="text" id="get" style="width:300;height:70;border:1px solid #777;border-radius: 5px;">
+        <br>
+        <div id="ytid">
+        >><text id="display" style="border:1px solid #777;border-radius: 5px;font-size: 13px;"></text></div>
+        <button id="add">
+          Add
+        </button>
+        
+        <button id="go">
+          Go
+        </button>
+        </div>
+        <script src="youtubeidfinder.js"></script>
+
+    </div>
+    </div>
+<div id="rightdiv" name="rightdiv">
+<div id="Notes" style="display:none; position: right;">
+        >>Executing: "Notes"
+        <br>
+        <div id="ui">
+            <textarea name="notes" id="notes" cols="40" rows="10"></textarea>
+        </div>
+        </div></right>
+        
+            >>Executing: "CMD_Executor"
+            <br>
+            >>[Type "help" to see commands!]
+            <br>
+
+            >> <input type="text" name="inputField" id="answer" placeholder="Enter command" required; style="width:70%">
+            <button id="submit" type="button" name="button" style="width: 40px;">✔</button>
+            <p id="demo"></p>
+            <script src="cmdinput.js"></script>
+        
+
+    </div>
+    
+
+
+    <div class="taskbar">
+        
+        <div class="startbutton"><center><img src="start.png" alt=">>execute start"></img></center></div>
+        <div class="tasks">
+            <button title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('Notes') .style.display=='none') {document.getElementById('Notes') .style.display=''}else{document.getElementById('Notes') .style.display='none'}">Notes</button>
+    
+            <button title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('Youtube') .style.display=='none') {document.getElementById('Youtube') .style.display=''}else{document.getElementById('Youtube') .style.display='none'}">Youtube</button>
+    
+        </div>
+        
+    </center>
+</body>
+</html>
